@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Silas Belem Junior",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 46, "left": 134.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GND.8", "servo1:GND", "black", [ "h0" ] ],
+    [ "pico:3V3", "servo1:V+", "green", [ "h32.66", "v54.25" ] ],
+    [ "pico:GP22", "servo1:PWM", "red", [ "h23.06", "v-3.25", "h38.4" ] ]
+  ],
+  "dependencies": {}
+}
